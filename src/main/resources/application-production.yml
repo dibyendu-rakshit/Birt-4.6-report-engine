@@ -1,0 +1,25 @@
+#BIRT REPORT CONFIGURATION
+birt:
+  report:
+    input:
+      file-loc: /opt/report-engine/report
+    output:
+      file-loc: /tmp/report-engine
+
+cougar:
+  domain:
+    scheme: https
+
+kafka:
+  topic: report-engine-2
+  group-id: report-processor
+
+spring:
+  application:
+      name: birt-engine-2
+
+logging:
+  level:
+    org.springframework.web: WARN
+    com.greytip.birtreport: WARN
+  file: /var/log/app/main.log

@@ -1,0 +1,47 @@
+#BIRT REPORT CONFIGURATION
+birt:
+  report:
+    input:
+      file-loc: D:\cougar\cougar_payroll_reportinfo\src\main\java\com\greytip\report
+    output:
+      file-loc: D:\offline-report-gen
+    generator:
+      username: report-engine-2
+      password: sa
+
+cougar:
+  public:
+    schema:
+      url: jdbc:postgresql://192.168.3.103:5432/public_paresh
+      username: majordomo
+      password: sa
+  dev-port: 8000
+  domain:
+    scheme: https
+
+#KAFKA CONFIGURATION
+kafka:
+  topic: birt4-report-topic
+  bootstrap-servers: 192.168.202.52:9092
+  zookeeper-servers: 192.168.202.52:2181
+  group-id: birt-report-new
+
+spring:
+  profiles:
+      active: dev
+  application:
+      name: birt-report
+
+# LOGGING
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.greytip.birtreport: INFO
+  file: D:\birt-report\application.log
+
+aws:
+  region: ap-south-1
+  access_key : AKIAIGQ5V4ZCGCUNUQGQ
+  access_secret: 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
+  s3:
+    bucket_name: gt-dib-attachment
