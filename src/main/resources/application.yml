@@ -41,7 +41,7 @@ logging:
 
 aws:
   region: ap-south-1
-  access_key : AKIAIGQ5V4ZCGCUNUQGQ
-  access_secret: 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
+  access_key : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  access_secret: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   s3:
     bucket_name: gt-dib-attachment
